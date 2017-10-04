@@ -8,3 +8,5 @@ You play as a gopher exploring a foreign universe.
 * At the moment, the project is split into two sources
 due to the differences in line breaks on Windows Linux/*nix.
 * Implement RNG fight mechanics for monster fights.
+
+[![baby-gopher](https://raw.githubusercontent.com/drnic/babygopher-site/gh-pages/images/babygopher-badge.png)](http://www.babygopher.org)
