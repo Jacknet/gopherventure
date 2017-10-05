@@ -1,5 +1,6 @@
-# GoAdventure
-__A proof-of-concept text adventure game made in Go.__
+# GopherVenture
+__A proof-of-concept simplistic text adventure game
+made in Go i'm making from the ground up.__
 
 You play as a gopher exploring a foreign universe.
 
