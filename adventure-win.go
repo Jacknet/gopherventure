@@ -18,7 +18,7 @@ func main() {
 	// Game asks for name.
 	fmt.Println("What is your name?")
 	name, _ := reader.ReadString('\n')
-	
+
 	if name == "\r\n" {
 		fmt.Println("Alrighty, player.")
 	} else {

@@ -13,6 +13,9 @@ your journey that you must fight.
 due to the differences in line breaks on Windows and
 Linux/*nix. Attempt to combine the two versions. Maybe
 include code that checks what environment you're using?
-* Implement RNG fight mechanics for monster battles.
+* ~~Implement RNG fight mechanics for monster battles.~~
+The `math/rand` package in Go is actually pseudo-random.
+Maybe combining this with the `time` package might
+give some more expected random values? To be experimented.
 
 [![baby-gopher](https://raw.githubusercontent.com/drnic/babygopher-site/gh-pages/images/babygopher-badge.png)](http://www.babygopher.org)
