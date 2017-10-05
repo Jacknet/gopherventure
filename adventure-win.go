@@ -18,14 +18,8 @@ func main() {
 	// Game asks for name.
 	fmt.Println("What is your name?")
 	name, _ := reader.ReadString('\n')
-
-	// Easter egg condition.
-	// Checks to see if you typed "Duke Nukem" and prints a special message.
-	// Gives a generic introduction that prints out name or fallback otherwise.
-	// Reference to the Duke Nukem video game series.
-	if name == "Duke Nukem\r\n" {
-		fmt.Println("It's time to kick ass and chew bubble gum. Unfortunately, you noticed that you're all out of gum...\n")
-	} else if name == "\r\n" {
+	
+	if name == "\r\n" {
 		fmt.Println("Alrighty, player.")
 	} else {
 		fmt.Println("Alrighty,", name)
