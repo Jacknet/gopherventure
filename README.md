@@ -1,11 +1,14 @@
 # GopherVenture
-__A proof-of-concept simplistic text adventure game
-made in Go i'm making from the ground up.__
+__A single player text adventure game for all ages
+made in Go from the ground up.__
 
-You play as a gopher exploring a foreign universe.
+You are a gopher who ended up in a foreign universe.
+Along the way, you try to find the exit to get back to
+your normal world. But beware, as there's monsters along
+your journey that you must fight.
 
 ### TO-DOs:
-* A story is yet to be developed.
+* A more developed plot is yet to be developed.
 * At the moment, the project is split into two sources
 due to the differences in line breaks on Windows and
 Linux/*nix. Attempt to combine the two versions. Maybe
