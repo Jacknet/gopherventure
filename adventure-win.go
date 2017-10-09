@@ -19,11 +19,12 @@ func main() {
 	fmt.Println("What is your name?")
 	name, _ := reader.ReadString('\n')
 
+	// Checks to see if you typed your name and tells name.
+	// Otherwise, use fallback name "player."
 	if name == "\r\n" {
-		fmt.Println("Alrighty, player.")
-	} else {
-		fmt.Println("Alrighty,", name)
+		name = "player"
 	}
+	fmt.Println("Alrighty,", name)
 
 	//declare variable used to track objective
 	obj := 0
