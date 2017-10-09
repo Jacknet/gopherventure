@@ -22,7 +22,7 @@ func main() {
 	// Checks to see if you typed your name and tells name.
 	// Otherwise, use fallback name "player."
 	if name == "\r\n" {
-		name = "player"
+		name = "player\r\n"
 	}
 	fmt.Println("Alrighty,", name)
 

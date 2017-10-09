@@ -16,6 +16,10 @@ include code that checks what environment you're using?
 * ~~Implement RNG fight mechanics for monster battles.~~
 The `math/rand` package in Go is actually pseudo-random.
 Maybe combining this with the `time` package might
-give some more expected random values? To be experimented.
+give some more suitable random values? To be experimented.
+* Player name would still contain line breaks.
+Maybe start using `fmt.Scanln()` instead of a reader for
+names? But it can only grab one word... This might need
+some experimentation.
 
 [![baby-gopher](https://raw.githubusercontent.com/drnic/babygopher-site/gh-pages/images/babygopher-badge.png)](http://www.babygopher.org)
