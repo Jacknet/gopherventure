@@ -41,7 +41,7 @@ func main() {
 			fmt.Println("\nYou pick up the key from the floor with your paw.")
 		} else if option == "open door\n" {
 			fmt.Println("\nYour try to twist the knob with your paw, but it won't budge. The door is locked.")
-		} else if obj == 0 {
+		} else {
 			fmt.Println("\nYou wonder what that means, but you can't seem to understand.")
 		}
 	}
@@ -54,7 +54,7 @@ func main() {
 		} else if option == "open door\n" {
 			obj++
 			fmt.Println("\nYou unlock the door and twist the knob. The door opens and you exit the room.")
-		} else if obj == 1 {
+		} else {
 			fmt.Println("\nYou wonder what that means, but you can't seem to understand.")
 		}
 	}
@@ -66,7 +66,7 @@ func main() {
 		if option == "pick up sword\n" {
 			obj++
 			fmt.Println("\nYou pick up the sword with your paw. The sword feels solid.")
-		} else if obj == 2 {
+		} else {
 			fmt.Println("\nYou wonder what that means, but you can't seem to understand.")
 		}
 	}
