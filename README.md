@@ -14,9 +14,8 @@ due to the differences in line breaks on Windows and
 Linux/*nix. Attempt to combine the two versions. Maybe
 include code that checks what environment you're using?
 * ~~Implement RNG fight mechanics for monster battles.~~
-The `math/rand` package in Go is actually pseudo-random.
-Maybe combining this with the `time` package might
-give some more suitable random values? To be experimented.
+Currently experimenting with mixing `time` stuff with
+`math/rand` stuff to make the pseudo-system is more varied.
 * Player name would still contain line breaks.
 Maybe start using `fmt.Scanln()` instead of a reader for
 names? But it can only grab one word... This might need

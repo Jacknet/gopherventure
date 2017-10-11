@@ -6,6 +6,7 @@ import (
 	"bufio"
 	"fmt"
 	"os"
+	//"time"
 	//"math/rand"
 )
 
@@ -73,6 +74,10 @@ func main() {
 
 	fmt.Println("A bug approaches you! You must fight using the sword!")
 	// TODO: RNG mechanic fight with monster
+	//t := time.Now()
+	//fmt.Println(rand.Intn(t.Nanosecond()))
+	//fmt.Println(rand.Intn(t.Nanosecond()))
+	//fmt.Println(rand.Intn(t.Nanosecond()))
 
 	// Temporary ending message for end of game
 	fmt.Println("You vision somehow fades and your adventure temporarily halts...\nPress Enter/Return to exit.")
