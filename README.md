@@ -14,8 +14,12 @@ due to the differences in line breaks on Windows and
 Linux/*nix. Attempt to combine the two versions. Maybe
 include code that checks what environment you're using?
 * ~~Implement RNG fight mechanics for monster battles.~~
-Currently experimenting with mixing `time` stuff with
-`math/rand` stuff to make the pseudo-system more varied.
+Currently experimenting with mixing `time` and
+`math/rand` to make the pseudo-system more varied.
+Might change to a RNG that loops over and over until it
+is called and needed, spews a number, and loops again.
+Some systems might not take advantage of clock-based RNG,
+so a looping RNG function might be implemented in place.
 * Player name would still contain line breaks.
 Maybe start using `fmt.Scanln()` instead of a reader for
 names? But it can only grab one word... This might need
