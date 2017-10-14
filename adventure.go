@@ -26,7 +26,7 @@ func main() {
 	if name == "" {
 		name = "player"
 	}
-	fmt.Printf("Alrighty, %s\n", name)
+	fmt.Printf("\nAlrighty, %s.\n", name)
 
 	//declare variable used to track objective
 	obj := 0
@@ -54,7 +54,7 @@ func main() {
 		option := string(byteOption)
 		if option == "pick up key" {
 			fmt.Println("\nYou already have the key on your paw.")
-		} else if option == "open door\r\n" {
+		} else if option == "open door" {
 			obj++
 			fmt.Println("\nYou unlock the door and twist the knob. The door opens and you exit the room.")
 		} else {
