@@ -1,4 +1,4 @@
-// GoAdventure - macOS/*nix \n version
+// GoAdventure!
 
 package main
 
@@ -18,14 +18,15 @@ func main() {
 
 	// Game asks for name.
 	fmt.Println("What is your name?")
-	name, _ := reader.ReadString('\n')
+	byteName, _, _ := reader.ReadLine()
+	name := string(byteName)
 
 	// Checks to see if you typed your name and tells name.
 	// Otherwise, use fallback name "player."
-	if name == "\n" {
-		name = "player\n"
+	if name == "" {
+		name = "player"
 	}
-	fmt.Println("Alrighty,", name)
+	fmt.Printf("Alrighty, %s\n", name)
 
 	//declare variable used to track objective
 	obj := 0
@@ -35,11 +36,12 @@ func main() {
 
 	// First objective is to pick up the key
 	for obj == 0 {
-		option, _ := reader.ReadString('\n')
-		if option == "pick up key\n" {
+		byteOption, _, _ := reader.ReadLine()
+		option := string(byteOption)
+		if option == "pick up key" {
 			obj++
 			fmt.Println("\nYou pick up the key from the floor with your paw.")
-		} else if option == "open door\n" {
+		} else if option == "open door" {
 			fmt.Println("\nYour try to twist the knob with your paw, but it won't budge. The door is locked.")
 		} else {
 			fmt.Println("\nYou wonder what that means, but you can't seem to understand.")
@@ -48,10 +50,11 @@ func main() {
 
 	// Second objective is to open the door
 	for obj == 1 {
-		option, _ := reader.ReadString('\n')
-		if option == "pick up key\n" {
+		byteOption, _, _ := reader.ReadLine()
+		option := string(byteOption)
+		if option == "pick up key" {
 			fmt.Println("\nYou already have the key on your paw.")
-		} else if option == "open door\n" {
+		} else if option == "open door\r\n" {
 			obj++
 			fmt.Println("\nYou unlock the door and twist the knob. The door opens and you exit the room.")
 		} else {
@@ -62,8 +65,9 @@ func main() {
 	// Third objective is to pick up the sword
 	fmt.Println("You hear something approach you. You notice a sword as you look down.\nOptions: [pick up sword]")
 	for obj == 2 {
-		option, _ := reader.ReadString('\n')
-		if option == "pick up sword\n" {
+		byteOption, _, _ := reader.ReadLine()
+		option := string(byteOption)
+		if option == "pick up sword" {
 			obj++
 			fmt.Println("\nYou pick up the sword with your paw. The sword feels solid.")
 		} else {
