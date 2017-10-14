@@ -9,10 +9,11 @@ your journey that you must fight.
 
 ### TO-DOs:
 * A more developed plot is yet to be developed.
-* At the moment, the project is split into two sources
+* ~~At the moment, the project is split into two sources
 due to the differences in line breaks on Windows and
 Linux/*nix. Attempt to combine the two versions. Maybe
-include code that checks what environment you're using?
+include code that checks what environment you're using?~~
+__This issue has been resolved!__
 * ~~Implement RNG fight mechanics for monster battles.~~
 Currently experimenting with mixing `time` and
 `math/rand` to make the pseudo-system more varied.
