@@ -1,4 +1,4 @@
-// GoAdventure!
+// GopherVenture!
 
 package main
 
@@ -13,11 +13,11 @@ import (
 func main() {
 
 	// Game intro and reader is declared
-	fmt.Println("-=GopherVenture!=-\nAn adventure game made in Go by Joaquin Padilla!\n")
+	fmt.Println("-=GopherVenture!=-\nAn adventure game made in Go by Joaquin Padilla!")
 	reader := bufio.NewReader(os.Stdin)
 
 	// Game asks for name.
-	fmt.Println("What is your name?")
+	fmt.Println("\nWhat is your name?")
 	byteName, _, _ := reader.ReadLine()
 	name := string(byteName)
 
@@ -28,7 +28,7 @@ func main() {
 	}
 	fmt.Printf("\nAlrighty, %s.\n", name)
 
-	//declare variable used to track objective
+	// Declare variable used to track objective
 	obj := 0
 
 	// Starting scenario is given along with the available commands
@@ -75,8 +75,19 @@ func main() {
 		}
 	}
 
+	// Now you must fight!
+	fmt.Println("A bug approaches you! You must fight using the sword!\nOptions: [slash enemy]")
+	for obj == 3 {
+		byteOption, _, _ := reader.ReadLine()
+		option := string(byteOption)
+		if option == "slash enemy" {
+			obj++
+			fmt.Println("\nYou slay the bug with your sword.")
+		} else {
+			fmt.Println("\nYou wonder what that means, but you can't seem to understand.")
+		}
+	}
 
-	fmt.Println("A bug approaches you! You must fight using the sword!")
 	// TODO: RNG mechanic fight with monster
 	//t := time.Now()
 	//fmt.Println(rand.Intn(t.Nanosecond()))
@@ -84,7 +95,7 @@ func main() {
 	//fmt.Println(rand.Intn(t.Nanosecond()))
 
 	// Temporary ending message for end of game
-	fmt.Println("You vision somehow fades and your adventure temporarily halts...\nPress Enter/Return to exit.")
+	fmt.Println("\nYou vision somehow fades and your adventure temporarily halts...\nPress Enter/Return to exit.")
 	reader.ReadString('\n')
 
 }
