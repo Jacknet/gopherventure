@@ -13,7 +13,7 @@ import (
 func main() {
 
 	// Game intro and reader is declared
-	fmt.Println("-=GopherVenture!=-\nAn adventure game made in Go by Joaquin Padilla!")
+	fmt.Println("-=GopherVenture!=-\nAn adventure game made in Go!")
 	reader := bufio.NewReader(os.Stdin)
 
 	// Game asks for name.
