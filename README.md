@@ -9,12 +9,7 @@ your journey that you must fight.
 
 ### TO-DOs:
 * A more developed plot is yet to be developed.
-* ~~At the moment, the project is split into two sources
-due to the differences in line breaks on Windows and
-Linux/*nix. Attempt to combine the two versions. Maybe
-include code that checks what environment you're using?~~
-__This issue has been resolved!__
-* ~~Implement RNG fight mechanics for monster battles.~~
+* Implement RNG fight mechanics for monster battles.
 Currently experimenting with mixing `time` and
 `math/rand` to make the pseudo-system more varied.
 Might change to a RNG that loops over and over until it
@@ -25,5 +20,3 @@ so a looping RNG function might be implemented in place.
 Maybe start using `fmt.Scanln()` instead of a reader for
 names? But it can only grab one word... This might need
 some experimentation.
-
-[![baby-gopher](https://raw.githubusercontent.com/drnic/babygopher-site/gh-pages/images/babygopher-badge.png)](http://www.babygopher.org)
