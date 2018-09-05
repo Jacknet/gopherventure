@@ -17,6 +17,7 @@ func main() {
 	reader := bufio.NewReader(os.Stdin)
 
 	// Set random number seed based on time
+	// TO BE ADDED
 
 	// Game asks for name.
 	fmt.Println("\nWhat is your name?")
@@ -89,11 +90,9 @@ func main() {
 			fmt.Println("\nYou wonder what that means, but you can't seem to understand.")
 		}
 	}
+
 	// TODO: RNG mechanic fight with monster
-	//t := time.Now()
-	//fmt.Println(rand.Intn(t.Nanosecond()))
-	//fmt.Println(rand.Intn(t.Nanosecond()))
-	//fmt.Println(rand.Intn(t.Nanosecond()))
+	// REFER TO rndtest.go
 
 	// Temporary ending message for end of game
 	fmt.Println("\nYou vision somehow fades and your adventure temporarily halts...\nPress Enter/Return to exit.")
