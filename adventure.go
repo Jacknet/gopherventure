@@ -6,12 +6,14 @@ import (
 	"bufio"
 	"fmt"
 	"os"
+	//"time"
+	//"math/rand"
 )
 
 func main() {
 
 	// Game intro and reader is declared
-	fmt.Println("-=GopherVenture!=-\nAn adventure game made in Go by Joaquin Padilla!")
+	fmt.Println("-=GopherVenture!=-\nAn adventure game made in Go!")
 	reader := bufio.NewReader(os.Stdin)
 
 	// Set random number seed based on time
