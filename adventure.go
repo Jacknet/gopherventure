@@ -6,15 +6,15 @@ import (
 	"bufio"
 	"fmt"
 	"os"
-	//"time"
-	//"math/rand"
 )
 
 func main() {
 
 	// Game intro and reader is declared
-	fmt.Println("-=GopherVenture!=-\nAn adventure game made in Go!")
+	fmt.Println("-=GopherVenture!=-\nAn adventure game made in Go by Joaquin Padilla!")
 	reader := bufio.NewReader(os.Stdin)
+
+	// Set random number seed based on time
 
 	// Game asks for name.
 	fmt.Println("\nWhat is your name?")
@@ -87,7 +87,6 @@ func main() {
 			fmt.Println("\nYou wonder what that means, but you can't seem to understand.")
 		}
 	}
-
 	// TODO: RNG mechanic fight with monster
 	//t := time.Now()
 	//fmt.Println(rand.Intn(t.Nanosecond()))
