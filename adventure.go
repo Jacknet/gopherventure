@@ -5,9 +5,9 @@ package main
 import (
 	"bufio"
 	"fmt"
+	"math/rand"
 	"os"
-	//"time"
-	//"math/rand"
+	"time"
 )
 
 func main() {
@@ -17,7 +17,7 @@ func main() {
 	reader := bufio.NewReader(os.Stdin)
 
 	// Set random number seed based on time
-	// TO BE ADDED
+	rand.Seed(time.Now().UTC().UnixNano())
 
 	// Game asks for name.
 	fmt.Println("\nWhat is your name?")
@@ -42,8 +42,8 @@ func main() {
 		byteOption, _, _ := reader.ReadLine()
 		option := string(byteOption)
 		if option == "pick up key" {
-			obj++
 			fmt.Println("\nYou pick up the key from the floor with your paw.")
+			obj++
 		} else if option == "open door" {
 			fmt.Println("\nYour try to twist the knob with your paw, but it won't budge. The door is locked.")
 		} else {
@@ -58,8 +58,8 @@ func main() {
 		if option == "pick up key" {
 			fmt.Println("\nYou already have the key on your paw.")
 		} else if option == "open door" {
-			obj++
 			fmt.Println("\nYou unlock the door and twist the knob. The door opens and you exit the room.")
+			obj++
 		} else {
 			fmt.Println("\nYou wonder what that means, but you can't seem to understand.")
 		}
@@ -71,8 +71,8 @@ func main() {
 		byteOption, _, _ := reader.ReadLine()
 		option := string(byteOption)
 		if option == "pick up sword" {
-			obj++
 			fmt.Println("\nYou pick up the sword with your paw. The sword feels solid.")
+			obj++
 		} else {
 			fmt.Println("\nYou wonder what that means, but you can't seem to understand.")
 		}
@@ -80,19 +80,41 @@ func main() {
 
 	// Now you must fight!
 	fmt.Println("A bug approaches you! You must fight using the sword!\nOptions: [slash enemy]")
+
+	// Sets enemy health
+	enemy := 10
+
 	for obj == 3 {
 		byteOption, _, _ := reader.ReadLine()
 		option := string(byteOption)
 		if option == "slash enemy" {
-			obj++
-			fmt.Println("\nYou slay the bug with your sword.")
+			fmt.Println("\nYou hit the bug with your sword.")
+
+			// Sword varies in damage from 0 to 5
+			sword := rand.Intn(6)
+			enemy -= sword
+
+			// Checks if enemy is defeated before moving
+			if enemy > 0 {
+				// Checks if sword did no damage to say appropriate message
+				if sword == 0 {
+					fmt.Println("Your sword has inflicted no damage.")
+				} else {
+					fmt.Println("Your sword has inflicted", sword, "damage.")
+				}
+
+				//Prints remaining enemy health
+				fmt.Println("The enemy has", enemy, "HP left.")
+				fmt.Println("Keep slashing!")
+			} else {
+				fmt.Println("Your sword has inflicted", sword, "damage.")
+				fmt.Println("The enemy has been slain and you move onward!")
+				obj++
+			}
 		} else {
 			fmt.Println("\nYou wonder what that means, but you can't seem to understand.")
 		}
 	}
-
-	// TODO: RNG mechanic fight with monster
-	// REFER TO rndtest.go
 
 	// Temporary ending message for end of game
 	fmt.Println("\nYou vision somehow fades and your adventure temporarily halts...\nPress Enter/Return to exit.")
