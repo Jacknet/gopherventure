@@ -21,5 +21,5 @@ generates a number seed at the start.
 
 Maybe start using `fmt.Scanln()` instead of a reader for
 names? But it can only grab one word... This might need
-some experimentation. At the moment, this issue us under
+some experimentation. At the moment, this issue is under
 low priority as it does not affect normal gameplay.
