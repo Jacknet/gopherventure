@@ -12,13 +12,14 @@ your journey that you must fight.
 
 In search of storywriters.
 
-* Implement RNG fight mechanics for monster battles.
+~~* Implement RNG fight mechanics for monster battles.~~
 
-Currently testing. See the go file in the `rndtest` folder
-for current progress.
+RNG mechanic successfully added for first battle! Game
+generates a number seed at the start.
 
 * Player name would still contain line breaks.
 
 Maybe start using `fmt.Scanln()` instead of a reader for
 names? But it can only grab one word... This might need
-some experimentation.
+some experimentation. At the moment, this issue us under
+low priority as it does not affect normal gameplay.
