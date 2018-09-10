@@ -12,7 +12,7 @@ your journey that you must fight.
 
 In search of storywriters.
 
-~~* Implement RNG fight mechanics for monster battles.~~
+* ~~Implement RNG fight mechanics for monster battles.~~
 
 RNG mechanic successfully added for first battle! Game
 generates a number seed at the start.
