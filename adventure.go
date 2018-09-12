@@ -66,7 +66,7 @@ func main() {
 	}
 
 	// Third objective is to pick up the sword
-	fmt.Println("You hear something approach you. You notice a sword as you look down.\nOptions: [pick up sword]")
+	fmt.Println("You hear something approaching. You notice a sword as you look down.\nOptions: [pick up sword]")
 	for obj == 2 {
 		byteOption, _, _ := reader.ReadLine()
 		option := string(byteOption)
