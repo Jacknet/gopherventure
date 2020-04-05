@@ -45,7 +45,7 @@ func main() {
 			fmt.Println("\nYou pick up the key from the floor with your paw.")
 			obj++
 		} else if option == "open door" {
-			fmt.Println("\nYour try to twist the knob with your paw, but it won't budge. The door is locked.")
+			fmt.Println("\nYou try to twist the knob with your paw, but it won't budge. The door is locked.")
 		} else {
 			fmt.Println("\nYou wonder what that means, but you can't seem to understand.")
 		}
